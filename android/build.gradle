@@ -2,15 +2,15 @@ group 'carnegietechnologies.gallery_saver'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.5.20'
-    ext.kotlinCoroutinesVersion = '1.3.8'
+    ext.kotlin_version = '1.9.10' // Update to latest Kotlin version
+    ext.kotlinCoroutinesVersion = '1.7.3' // Update to latest Kotlin Coroutines version
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.android.tools.build:gradle:8.1.1' // Update to latest Gradle plugin version
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -26,7 +26,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 34 // Update to latest SDK version
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -41,10 +41,10 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    api 'androidx.core:core-ktx:1.5.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version" // Use `jdk8` version for Kotlin stdlib
+    api 'androidx.core:core-ktx:1.12.0' // Latest Core KTX
     api 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.exifinterface:exifinterface:1.3.2'
+    implementation 'androidx.exifinterface:exifinterface:1.4.0' // Latest ExifInterface
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
 }
