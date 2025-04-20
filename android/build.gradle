@@ -2,7 +2,7 @@ group 'carnegietechnologies.gallery_saver'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.9.10' // Update to latest Kotlin version
+    ext.kotlin_version = '1.8.22' // Update to latest Kotlin version
     ext.kotlinCoroutinesVersion = '1.7.3' // Update to latest Kotlin Coroutines version
     repositories {
         google()
@@ -10,7 +10,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.1' // Update to latest Gradle plugin version
+        classpath 'com.android.tools.build:gradle:8.1.0' // Update to latest Gradle plugin version
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -26,7 +26,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 34 // Update to latest SDK version
+    compileSdkVersion 35 // Update to latest SDK version
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
